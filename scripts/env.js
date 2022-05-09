@@ -1,5 +1,5 @@
 const chalk = require('chalk')
-const { env } = require('../config/config')
+const { env } = require('../config')
 
 module.exports = (appEnv) => {
 	const envMap = env[appEnv]

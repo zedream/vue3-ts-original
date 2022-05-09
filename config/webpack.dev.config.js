@@ -4,7 +4,7 @@ const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 const { merge } = require('webpack-merge')
 const webpackBase = require('./webpack.base.config')
 const { getIp, createNotifierCallback } = require('../scripts/utils')
-const { port, proxy } = require('./config')
+const { port, proxy } = require('./index')
 
 module.exports = env => {
   const devConfig = merge(webpackBase(env), {

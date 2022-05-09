@@ -3,7 +3,7 @@ const chalk = require('chalk')
 const inquirer = require('inquirer')
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin')
 const webpackProdConfig = require('../config/webpack.prod.config')
-const envConfig = require('../config/config').env
+const envConfig = require('../config').env
 
 inquirer.prompt([
 	{

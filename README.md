@@ -36,16 +36,16 @@ yarn build
 | NODE_ENV | 区分开发环境与生产环境 | **development** 、 **production** |
 | APP_NODE_ENV | 区分production下的自定义环境 | **dev** 、 **prod** 、 **sit** 、 **uat** |
 | PUBLIC_PATH | 项目资源基础路径 | **/** 、 **/app/** 、 **//app.cdn.com** |
-| BASE_URL | http请求目标 | **/** 、 **[https:tanghaoo.com](https:tanghaoo.com)** |
+| BASE_URL | http请求目标 | **/** 、 **[https://tanghaoo.com](https://tanghaoo.com)** |
 
 ## 目录结构
 ```
 ├── .husky    [git hooks，用于在git commit成功前进行eslint检测，规范即将提交的代码风格]      
 ├── config    [项目配置文件]
-│   ├── config.js    [项目基础配置]
-│   ├── webpack.base.config.js    [webpack公共基础配置]
-│   ├── webpack.dev.config.js    [webpack开发环境配置]
-│   └── webpack.prod.config.js    [webpack生产环境配置]
+│   ├── index.js    [项目基础配置]
+│   ├── webpack.base.index.js    [webpack公共基础配置]
+│   ├── webpack.dev.index.js    [webpack开发环境配置]
+│   └── webpack.prod.index.js    [webpack生产环境配置]
 ├── node_modules
 ├── public
 │   └── index.html
@@ -62,19 +62,13 @@ yarn build
 │   │   └── styles    [公共样式]
 │   ├── components    [公共组件]
 │   ├── hooks
-│   ├── pages    [非常用业务组件]
-│   │   ├── access    [账号相关页]
-│   │   └── error    [错误页]
 │   ├── request    [http请求]
 │   ├── router    [页面路由]
-│   │   ├── views    [业务页面route]
-│   │   ├── pages.routes.ts    [非常用业务页面route组合]
-│   │   └── views.routes.ts    [业务页面route组合]
-│   ├── store    [状态]
-│   │   ├── modules    [不同模块状态]
-│   │   └── mutation.types.ts    [mutation方法名定义]
+│   ├── store    [公共状态]
+│   │   └── modules    [不同模块状态]
 │   ├── types    [类型定义]
 │   ├── utils    [公共方法]
 │   ├── views    [业务组件]
+│   │   └── page    [非常用业务组件]
 │   └── works    [webwork]
 ```
